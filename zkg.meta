@@ -1,0 +1,14 @@
+[package]
+script_dir = scripts
+summary = Send Notices over Telegram (ZeekJS edition)
+description = Package that extends the Notice Framework to include
+    `ACTION_TELEGRAM` for sending messages on notices over Telegram using ZeekJS.
+depends = zeekjs *
+
+[template]
+source = https://github.com/zeek/package-template
+version = v3.0.0
+zkg_version = 2.13.0-30
+
+[template_vars]
+name = zeekjs-notice-telegram

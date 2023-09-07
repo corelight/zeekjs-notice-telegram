@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true
+  },
+  "lib": ["es2015"]
+}
