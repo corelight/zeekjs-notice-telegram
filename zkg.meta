@@ -1,5 +1,6 @@
 [package]
 script_dir = scripts
+test_command = cd testing && btest -c btest.cfg
 summary = Send Notices over Telegram (ZeekJS edition)
 description = Package that extends the Notice Framework to include
     `ACTION_TELEGRAM` for sending messages on notices over Telegram using ZeekJS.
