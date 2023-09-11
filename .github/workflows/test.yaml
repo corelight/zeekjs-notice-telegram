@@ -1,0 +1,26 @@
+name: Test
+on:
+  pull_request:
+  push:
+    branches: [master]
+  schedule:
+    # Also run 1:37 PM every second day
+    - cron: '37 13 * * */2'
+jobs:
+  btests:
+    name: Run btests on ${{ matrix.zeek_container }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        zeek_container: ["zeek/zeek:lts", "zeek/zeek:latest", "zeek/zeek-dev:latest"]
+    container: ${{ matrix.zeek_container }}
+    steps:
+        - name: Checkout Project
+          uses: actions/checkout@v3
+
+        - name: Run btests
+          run: |
+            cd $GITHUB_WORKSPACE/testing
+            btest -v -D
+
