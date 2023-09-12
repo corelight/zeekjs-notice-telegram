@@ -74,5 +74,5 @@ const server = https.createServer(options, (req, res) => {
 
 const port = parseInt(process.env.MOCK_PORT);
 
-server.listen(port, "localhost");
 
+server.listen(port, "127.0.0.1");
