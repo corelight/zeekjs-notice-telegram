@@ -68,8 +68,9 @@ const server = https.createServer(options, (req, res) => {
         resp = `{"ok":false}\n`;
     }
 
+    res.end(resp);
+    server.close();
     zeek.invoke('terminate')
-    return res.end(resp);
 });
 
 const port = parseInt(process.env.MOCK_PORT);
