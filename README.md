@@ -7,9 +7,9 @@ It borrows both Yacin's package above and the ZeekJS reimplementation of _that_ 
 [zeekjs-notice-slack](https://github.com/pgaulon/zeekjs-notice-slack/).
 
 ## Code generation
-Re-generating `scripts/telegram.js` from the TypeScript source can be done by running `make` in the `scripts` directory. This requires:
-- `make` and the `tsc` transpiler
-- The nodejs type definitions (use `npm install --save @types/node`)
+
+Re-generating `scripts/telegram.js` from the TypeScript source can be done by
+running `npm install && npm run build`.
 
 ## Example usage
 Basic usage is identical to [zeek-notice-telegram](https://github.com/corelight/zeek-notice-telegram). To recap, one might use it like this:
