@@ -75,5 +75,7 @@ const server = https.createServer(options, (req, res) => {
 
 const port = parseInt(process.env.MOCK_PORT);
 
+// Required to prevent libnode from catching SIGTERM when zeek terminates?!
+process.on('SIGTERM', () => {});
 
 server.listen(port, "127.0.0.1");
